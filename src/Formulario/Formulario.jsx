@@ -2,10 +2,12 @@ import { useState } from 'react';
 import styles from './formulario.module.css';
 import { useEffect } from 'react';
 
-export default function Formulario({ setResultadoIMC }) {
+export default function Formulario({ setResultadoIMC, setPesoMinimo, setPesoMaximo }) {
 
     const [alturaFinal, setAlturaFinal] = useState();
     const [pesoFinal, setPesoFinal] = useState();
+    const idealMinimoIMC = 18.5;
+    const idealMaximoIMC = 24.9;
 
     function calculoIMC() {
 
@@ -19,6 +21,12 @@ export default function Formulario({ setResultadoIMC }) {
             const imcFormatado = imc.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 
             setResultadoIMC(imcFormatado);
+
+            const pesoIdealMin = idealMinimoIMC * (alturaNumero * alturaNumero);
+            const pesoIdealMax = idealMaximoIMC * (alturaNumero * alturaNumero);
+
+            setPesoMinimo(pesoIdealMin.toFixed(0));
+            setPesoMaximo(pesoIdealMax.toFixed(0));
         }
 
     }

@@ -6,12 +6,14 @@ import { useState } from 'react'
 
 function App() {
   const [resultadoFinalIMC, setResultadoFinalIMC] = useState();
+  const [pesoIdealMinFinal, setPesoIdealMinFinal] = useState();
+  const [pesoIdealMaxFinal, setPesoIdealMaxFinal] = useState();
 
   return (
     <>
       <Header />
-      <Formulario setResultadoIMC={setResultadoFinalIMC} />
-      <Resultado_tabela resultadoIMC={resultadoFinalIMC} />
+      <Formulario setResultadoIMC={setResultadoFinalIMC} setPesoMinimo={setPesoIdealMinFinal} setPesoMaximo={setPesoIdealMaxFinal} />
+      <Resultado_tabela resultadoIMC={resultadoFinalIMC} pesoMinimo={pesoIdealMinFinal} pesoMaximo={pesoIdealMaxFinal} />
       <Footer />
     </>
   )
