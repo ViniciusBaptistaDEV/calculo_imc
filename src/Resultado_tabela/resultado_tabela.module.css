@@ -1,0 +1,20 @@
+.resultado {
+    background: linear-gradient(to bottom, #FFEB3B, #FF7043);
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.listatabela {
+    border: 2px solid #000;
+}
+
+.tabela{
+    @media (max-width: 728px) {
+
+        width: 100% !important;
+        max-width: 400px !important;
+    background-color: red !important;
+
+}
+}

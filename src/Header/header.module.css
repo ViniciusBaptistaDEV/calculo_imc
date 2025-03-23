@@ -1,0 +1,11 @@
+.imagemIcone {
+    width: 53px;
+    height: 53px;
+}
+
+.header {
+    background: linear-gradient(to bottom, #FFEB3B, #FF7043);
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    padding: 10px;
+}

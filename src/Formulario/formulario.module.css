@@ -1,0 +1,15 @@
+.formulario {
+    background: linear-gradient(to bottom, #FF7043, #FFEB3B);
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+select {
+    background-color: green !important;
+    color: #fff !important;
+}
+
+option {
+    background-color: rgb(32, 29, 29, 0.6);
+}
