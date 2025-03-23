@@ -2,11 +2,10 @@ import { useState } from 'react';
 import styles from './formulario.module.css';
 import { useEffect } from 'react';
 
-export default function Formulario() {
+export default function Formulario({ setResultadoIMC }) {
 
     const [alturaFinal, setAlturaFinal] = useState();
     const [pesoFinal, setPesoFinal] = useState();
-    const [resultadoIMC, setResultadoIMC] = useState();
 
     function calculoIMC() {
 
@@ -89,7 +88,7 @@ export default function Formulario() {
                     </div>
                 </div>
 
-                <h1>(Resultado apenas para teste) O seu IMC é: {resultadoIMC} </h1>
+                {/* <h1>(Resultado apenas para teste) O seu IMC é: {resultadoIMC} </h1> */}
             </form>
 
         </div>
