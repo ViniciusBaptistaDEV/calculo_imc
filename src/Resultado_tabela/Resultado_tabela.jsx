@@ -8,7 +8,10 @@ export default function Resultado_tabela({ resultadoIMC }) {
 
     useEffect(() => {
 
-        const IMCNumerico = parseFloat(resultadoIMC.replace(',', '.'));
+        let IMCNumerico = resultadoIMC;
+
+        IMCNumerico = parseFloat(resultadoIMC);
+
 
         if (IMCNumerico < 18.5) {
 
@@ -50,7 +53,7 @@ export default function Resultado_tabela({ resultadoIMC }) {
             <h2 className='fw-bold border-bottom border-secondary pb-3'>Resultado do Cálculo</h2>
 
             <div className='pt-3'>
-                <span className='fs-5 text-center'>Resultado do seu IMC: {resultadoIMC} </span>
+                <span className='fs-5 text-center'>IMC: {resultadoIMC} </span>
                 <p> {mensagemIMC} </p>
             </div>
 
