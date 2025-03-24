@@ -1,4 +1,4 @@
-import styles from './Interface.module.css';
+import styles from './interface.module.css';
 
 export default function Interface() {
     return (
